@@ -23,7 +23,7 @@ import haiku as hk
 import jax
 import jax.numpy as jnp
 import numpy as np
-from tapnet import tapir_model
+import tapir_model
 
 
 NUM_POINTS = 8
@@ -165,7 +165,7 @@ print("Loading checkpoint...")
 # --------------------
 # Load checkpoint and initialize
 params, state = load_checkpoint(
-    "tapnet/checkpoints/causal_tapir_checkpoint.npy"
+    "checkpoints\causal_tapir_checkpoint.npy"
 )
 
 print("Creating model...")
