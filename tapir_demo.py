@@ -149,7 +149,7 @@ def play_video(video_file):
                 cv.destroyAllWindows()
 
                 # Save the video as a gif file
-                output_gif_file = "outputs\input_video.gif" 
+                output_gif_file = "outputs/input_video.gif" 
                 frames[0].save(output_gif_file, save_all=True, append_images=frames[1:], loop=0)
                 print(f"Input video is saved as a GIF file to {output_gif_file}")
                 return width, height
@@ -218,7 +218,7 @@ def visualize_video(frames_np, fps=30, video_file="output_video"):
             if key == ord('q'):
                 cv.destroyAllWindows()
                 # Save the output video as a gif file
-                output_gif_file = f"outputs\{video_file}.gif"
+                output_gif_file = f"outputs/{video_file}.gif"
                 # Convert frames to PIL Image objects
                 frames = [Image.fromarray(np.uint8(frame)) for frame in frames] 
                 frames[0].save(output_gif_file, save_all=True, append_images=frames[1:], loop=0)
@@ -303,7 +303,7 @@ if __name__ == "__main__":
     fig.canvas.mpl_connect('button_press_event', on_click)
     plt.show()
     # Save the plot as an image file (e.g., PNG)
-    output_image_file = 'outputs\selected_points.png'
+    output_image_file = 'outputs/selected_points.png'
     fig.savefig(output_image_file)
     print(f"Plot with selected points saved to {output_image_file}")
     print(select_points)
